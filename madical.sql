@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2024 at 12:49 PM
+-- Generation Time: Jul 08, 2024 at 05:49 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -93,6 +93,24 @@ CREATE TABLE `contact_us` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `default_data`
+--
+
+CREATE TABLE `default_data` (
+  `id` int(11) NOT NULL,
+  `default_image` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `default_data`
+--
+
+INSERT INTO `default_data` (`id`, `default_image`) VALUES
+(1, 'default_image.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `product`
 --
 
@@ -131,7 +149,8 @@ INSERT INTO `product` (`id`, `categories_id`, `sub_categories_id`, `name`, `mrp`
 (16, 25, 4, 'u65ytehdgfdc', 565654, 6565, 2, '3679708304_651584201_Floral-Embroidered-Polo-T-shirt.jpg', '', '', '', 1, '', 0, '', 1, 0),
 (17, 27, 1, 'awrsedtfghyj', 565654, 6565, 2, '7803170230_309027777_Floral-Print-Polo-T-shirt.jpg', '', '', '', 1, '', 0, '', 1, 0),
 (18, 32, 7, 'tshirt', 5654640, 545, 10, '7585133237_931830512__8-(1)-E5x-104831-NJD.jpg', '', '', '', 1, '', 0, '', 1, 0),
-(20, 32, 7, 'test desc', 6456, 456, 10, '4299934273_matthew-hamilton-3RlGBpFeoQg-unsplash.jpg', 'test desc', 'test desc', '', 1, '', 0, '', 1, 3);
+(20, 32, 7, 'test desc', 6456, 456, 10, '4299934273_matthew-hamilton-3RlGBpFeoQg-unsplash.jpg', 'test desc', 'test desc', '', 1, '', 0, '', 1, 3),
+(21, 27, 1, 'iyfgyutgyugjhg', 4589, 231, 235, '7941758064_4124329009_5.jpg', '', '', '', 0, '', 0, '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -182,6 +201,12 @@ ALTER TABLE `contact_us`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `default_data`
+--
+ALTER TABLE `default_data`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
@@ -216,10 +241,16 @@ ALTER TABLE `contact_us`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `default_data`
+--
+ALTER TABLE `default_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
