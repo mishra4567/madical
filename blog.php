@@ -6,8 +6,6 @@
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <meta name="copyright" content="MACode ID, https://macodeid.com/">
-
   <title>One Health - Medical Center HTML5 Template</title>
 
   <link rel="stylesheet" href="./assets/css/maicons.css">
