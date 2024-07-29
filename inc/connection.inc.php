@@ -6,7 +6,6 @@ if ($con->connect_error) {
     header("Location: ../error.php");
     exit();
 }
-
 define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT'].'/project/madical/');
 define('SITE_PATH','http://localhost:8088/project/madical/');
 

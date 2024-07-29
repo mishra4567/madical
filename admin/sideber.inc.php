@@ -8,14 +8,14 @@ if(isset($_SESSION['ADMIN_LOGIN'])&& $_SESSION['ADMIN_LOGIN']!=''){
     header('location:./signin.php');
     die();
 }
-
+$current_page = basename($_SERVER['PHP_SELF']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title><?php echo $sitename ?> :- <?php echo $sitAdmin ?></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -73,18 +73,18 @@ if(isset($_SESSION['ADMIN_LOGIN'])&& $_SESSION['ADMIN_LOGIN']!=''){
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="./product.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Product Master</a>
+                    <a href="index.php" class="nav-item nav-link <?php echo ($current_page=='index.php')?'active':''; ?>"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="./product.php" class="nav-item nav-link <?php echo ($current_page=='product.php')?'active':''; ?>"><i class="fa fa-th me-2"></i>Product Master</a>
                     <?php if($_SESSION['ADMIN_ROLE']==1){ ?>
 
                     <?php  }else{ ?>
 
                     <?php  }?>
                     <?php if($_SESSION['ADMIN_ROLE']!=1){ ?>
-                    <a href="./categories.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Categories Master</a>
-                    <a href="./sub_categories.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Sub Categories</a>
-                    <a href="./vendor.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Vendor Master</a>
-                    <a href="./contact.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Contact Us</a>
+                    <a href="./categories.php" class="nav-item nav-link <?php echo ($current_page=='categories.php')?'active':''; ?>"><i class="fa fa-keyboard me-2"></i>Categories Master</a>
+                    <a href="./sub_categories.php" class="nav-item nav-link <?php echo ($current_page=='sub_categories.php')?'active':''; ?>"><i class="fa fa-keyboard me-2"></i>Sub Categories</a>
+                    <a href="./vendor.php" class="nav-item nav-link <?php echo ($current_page=='vendor.php')?'active':''; ?>"><i class="fa fa-chart-bar me-2"></i>Vendor Master</a>
+                    <a href="./contact.php" class="nav-item nav-link <?php echo ($current_page=='contact.php')?'active':''; ?>"><i class="fa fa-chart-bar me-2"></i>Contact Us</a>
                     <?php } ?>
                 </div>
             </nav>
