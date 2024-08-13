@@ -24,6 +24,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
   <link rel="stylesheet" href="assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="assets/css/theme.css">
+
+  <link rel="stylesheet" href="./assets/css/custome.css">
 </head>
 
 
@@ -77,17 +79,17 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <li class="nav-item <?php echo ($current_page=='index.php')?'active':''; ?> ">
               <a class="nav-link" href="index.php">Home</a>
             </li>
-            <li class="nav-item <?php echo ($current_page=='about.php')?'active':''; ?>">
-              <a class="nav-link" href="about.php">About Us</a>
-            </li>
             <li class="nav-item <?php echo ($current_page=='doctors.php')?'active':''; ?>">
               <a class="nav-link" href="doctors.php">Doctors</a>
             </li>
-            <li class="nav-item <?php echo ($current_page=='blog.php')?'active':''; ?>">
-              <a class="nav-link" href="blog.php">News</a>
+            <li class="nav-item <?php echo ($current_page=='productBuy.php')?'active':''; ?>">
+              <a class="nav-link" href="productBuy.php">Online Buy</a>
             </li>
             <li class="nav-item <?php echo ($current_page=='contact.php')?'active':''; ?>">
               <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+            <li class="nav-item <?php echo ($current_page=='about.php')?'active':''; ?>">
+              <a class="nav-link" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="#">Login / Register</a>
